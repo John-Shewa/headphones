@@ -1,7 +1,17 @@
 body {
-    background-image: url(images/headphones_hero_1.jpg);
+    background-image: url("images/headphones_hero_1.jpg");
+}
 
+.header {
+    display: flex;
+    flex-direction: row;
 }
-.logo .menu {
-    text-align: right;
+
+.logo {
+    float: left;
 }
+
+.menu {
+    float: right;
+}
+
