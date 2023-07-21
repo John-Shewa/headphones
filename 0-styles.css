@@ -1,75 +1,209 @@
+* {
+  box-sizing: border-box;
+}
 body {
-    background-image: url("images/headphones_hero_1.jpg");
+  margin: 0px;
+  padding: 0px;
 }
 
+.hero-section {
+  background-image: url("./images/headphones_hero_1.jpg");
+  background-repeat: no-repeat;
+
+  height: 800px;
+}
+
+/* navbar */
 .header {
+  min-block-size: 100px;
+  margin-block-end: 225px;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: 200px;
+}
+
+.navbar input {
+  visibility: hidden;
+  position: absolute;
+}
+
+.logo {
+  width: 160px;
+  height: auto;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-item a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+.nav-item a:hover {
+  color: #ff6565;
+}
+
+.main-part {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.main-part h1 {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #ffffff;
+}
+
+.main-part h2 {
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.main-part .call {
+  background: #ff6565;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  width: 162px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 50px;
+  border: none;
+  text-transform: uppercase;
+}
+
+.main-part .call:hover {
+  cursor: pointer;
+}
+
+.main-part p {
+  display: flex;
+  width: 637px;
+  height: 104px;
+  line-height: 26px;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    max-width: 300px;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    float: left;
+    margin-top: 29px;
+    margin-inline: 10px;
+  }
+  .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .menu {
+    display: none;
+  }
+  .nav-btn {
+    margin-left: 10px;
+    inline-size: 75px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: start;
+  }
+  .bar-icon {
     display: flex;
     flex-direction: column;
-    color: #fff;
-    justify-content: space-between;
- }
-  
+    height: 20px;
+    gap: 4px;
+  }
+  .menu-line {
+    width: 18px;
+    height: 2px;
+    background-color: white;
+    border-radius: 30px;
+  }
+  .menu-line:nth-child(2) {
+    width: 13px;
+  }
+
+  .nav-icon input:checked ~ .menu {
+    display: block;
+  }
+
   .logo {
-    float: left;
-    margin: 20px;
-    padding: 20px;
-  }
-  
-  .menu {
-    float: right;
-    list-style: none;
-    margin: 20px;
-    padding: 20px;
-  }
-  
-  .menu li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  .menu a {
-    color: #fff;
-    text-decoration: none;
+    width: 161px;
+    height: 32px;
   }
 
-  .menu a:hover {
-    color: #FF6565;
+  .hero-section {
+    background-image: url("./images/headphones_hero_1.jpg");
+    background-repeat: no-repeat;
+    background-position: -375px -40px;
+    background-clip: border-box;
+    height: 869px;
+    border: 1px solid;
   }
-  
-  /* Call to action */
-  .calltoaction {
-    color: #FFFFFF;
-    text-align: center;
+  .main-part {
+    margin-top: -30px;
+    display: flex;
     align-items: center;
-    
-  }
-  
-  h1 {
-    font-size: 2em;
-  }
 
-  p {
-    text-align: center;
-    margin-bottom: 20px;
+    gap: 7px;
   }
-  
-  button {
-    background-color: #FF6565;
-    border-radius: 10px;
-    color: #fff;
+  .main-part h1 {
+    padding: 0px;
+    font-size: 22px;
+    margin: 0px;
+    margin-inline: 12px;
+    text-align: center;
+  }
+  .main-part h2 {
+    margin: 0px;
+    font-weight: 200;
+    font-size: 15px;
+    margin-inline: 40px;
+    text-align: center;
+  }
+  .main-part .call {
+    font-size: 10px;
+    width: 137px;
     padding: 10px;
-    border: none;
-    cursor: pointer;
+    margin-top: 10px;
   }
-  
-  /* Main */
-  main {
-    padding: 300px;
-    margin: 35px;
-    align-items: center;
+
+  .main-part p {
+    font-weight: 100;
+    margin-top: 50px;
+    width: 300px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
   }
-  
-  /* Footer */
-  footer {
-    
-  }
+}
